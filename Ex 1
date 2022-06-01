@@ -1,5 +1,4 @@
-/*
-Construa um programa que sorteie 30 números entre 0 e 500 utilizando um 
+/* Construa um programa que sorteie 30 números entre 0 e 500 utilizando um 
 procedimento SORTEIADADOS. Posteriormente, faça um procedimento que 
 classifique-o em ordem crescente (qualquer técnica) denominado CLASSIFICADADOS.
 Em seguida, solicite um dado numérico, e através de uma função denominada 
