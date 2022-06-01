@@ -1,10 +1,3 @@
-/* Construa um programa que sorteie 30 números entre 0 e 500 utilizando um 
-procedimento SORTEIADADOS. Posteriormente, faça um procedimento que 
-classifique-o em ordem crescente (qualquer técnica) denominado CLASSIFICADADOS.
-Em seguida, solicite um dado numérico, e através de uma função denominada 
-BUSCA, realize a busca no vetor e retorne 0 (zero) caso o elemento não seja 
-localizado ou o seu endereço no vetor caso seja encontrado. */
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>
