@@ -1,0 +1,68 @@
+/*
+Construa um programa que sorteie 30 números entre 0 e 500 utilizando um 
+procedimento SORTEIADADOS. Posteriormente, faça um procedimento que 
+classifique-o em ordem crescente (qualquer técnica) denominado CLASSIFICADADOS.
+Em seguida, solicite um dado numérico, e através de uma função denominada 
+BUSCA, realize a busca no vetor e retorne 0 (zero) caso o elemento não seja 
+localizado ou o seu endereço no vetor caso seja encontrado. */
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<time.h>
+
+int dados[30];
+void sorteiadados();
+void classificados();
+int busca();
+
+int main(){
+    setlocale(LC_ALL,"Portuguese");
+    sorteiadados();
+    classificados();
+    for(int i = 0; i < 30; i++){
+        printf("%i ",dados[i]);
+    } 
+    busca();
+    system("pause");    
+}
+
+void sorteiadados(){
+    srand(time(NULL));
+    for(int i = 0; i < 30; i++){
+        dados[i] = rand() % 501;       
+    }     
+}
+
+void classificados(){
+    int aux;
+    for(int i = 0; i < 29; i++){
+            for(int x = i + 1; x < 30; x++){
+                    if(dados[i] > dados[x]){
+                                aux = dados[i];
+                                dados[i] = dados[x];
+                                dados[x] = aux;   
+                    }
+            }
+    }
+}
+
+int busca(){
+    int num;
+    bool x;
+    printf("\nDigite um número para saber se o mesmo está no vetor: ");
+    scanf("%i",&num);
+    fflush(stdin);
+    for(int i = 0; i < 30; i++){
+            if(num == dados[i]){
+                   x = true;
+            }
+    }
+            if(x == true){ 
+                   printf("O número %i está nos dados\n",num);
+            }
+            else{
+                   printf("O número %i não está nos dados\n",num);
+                   return(0);
+            }
+}
